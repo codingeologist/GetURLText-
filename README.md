@@ -13,5 +13,5 @@ One could just install an Adblocker (Such as UBlock Origins or AdBlock) but this
 
 The main part of the program is the get_text function:
 - The URL is decoded and parsed into BS4.
-- All text contained with the paragraph (<p>) elements are saved.
+- All text contained with the paragraph ('<p>') elements are saved.
 - The text is then formatted into lines for visualisation.
