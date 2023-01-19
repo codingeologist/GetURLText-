@@ -1,0 +1,30 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    background: rgb(0, 0, 0);
+  }
+  
+  #parent {
+    position: relative;
+    margin: 0 auto;
+    height: 100vh;
+    margin-bottom: 30%;
+    display: flex;
+    justify-content: center;
+    word-wrap: break-word;
+  }
+  
+  #textBody {
+    margin: 0;
+    position: absolute;
+    vertical-align: middle;
+    text-align: center;
+    width: 75%;
+    height: 50%;
+    top: 30%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+  }
