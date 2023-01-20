@@ -21,10 +21,24 @@ body {
     text-align: center;
     width: 75%;
     height: 50%;
-    top: 30%;
+    top: 40%;
     transform: translateY(-50%);
     color: white;
     font-size: large;
     font-weight: bold;
     font-style: italic;
+    line-height: 2.5em;
+  }
+
+  #search {
+    margin: 0;
+    top: 10px;
+    position: absolute;
+    width: 90%;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius:10px;
+    box-shadow:0 0 15px 4px rgba(255, 0, 0, 0.308);
   }

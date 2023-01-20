@@ -21,16 +21,15 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
        <!--- Favicon Image
         ================================================== -->
-       <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico')}}">
+       <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png')}}">
        <title>UBlock.me</title>
     </head>
     <body>
         <!-- Parent -->
         <div id="parent">
             <!-- Form -->
-            <form method="POST">
-                <label for="flink">Article Link:</label><br>
-                <input type="text" id="flink" name="flink" value=""><br>
+            <form id="search" method="POST">
+                <input type="text" id="flink" name="flink" placeholder="article URL..."><br>
                 <input type="submit" value="UnBlock Article!">
             </form>             
             <div id="textBody">
