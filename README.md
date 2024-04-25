@@ -19,4 +19,20 @@ The main part of the program is the get_text function:
 - All text contained with the paragraph < p > elements are saved.
 - The text is then formatted into lines for visualisation.
 
-## [LIVE URL](http://unblockme.pythonanywhere.com/)
+- build docker image with tag:$version
+```bash
+export APP_VERSION=0.0.1
+docker build --tag url-text:$APP_VERSION .
+```
+
+- show docker images list
+```bash
+docker images
+```
+
+- run docker image
+```bash
+docker run -d -p 5000:5000 url-text:$APP_VERSION
+```
+
+http://localhost/5000
