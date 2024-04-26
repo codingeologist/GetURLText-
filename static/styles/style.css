@@ -13,8 +13,28 @@ body {
     justify-content: center;
     word-wrap: break-word;
   }
-  
-  #textBody {
+
+  #search {
+    margin: 0;
+    top: 10px;
+    position: absolute;
+    width: 90%;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius:10px;
+    box-shadow:0 0 15px 4px rgba(255, 0, 0, 0.308);
+  }
+
+#flink {
+  width: 98%;
+  resize: horizontal;
+  vertical-align: middle;
+  text-align: center;
+}
+
+  #textH1 {
     margin: 0;
     position: absolute;
     vertical-align: middle;
@@ -24,22 +44,24 @@ body {
     top: 40%;
     transform: translateY(-50%);
     color: white;
-    font-size: large;
+    font-size: x-large;
     font-weight: bold;
-    font-style: italic;
-    line-height: 2.5em;
+    font-style: normal;
+    line-height: 2;
   }
 
-  #search {
+  #textP {
     margin: 0;
-    top: 10px;
     position: absolute;
-    width: 90%;
     vertical-align: middle;
-    text-align: center;
-    resize: horizontal;
-    padding-top: 18px;
-    padding-bottom: 18px;
-    border-radius:10px;
-    box-shadow:0 0 15px 4px rgba(255, 0, 0, 0.308);
+    text-align: justify;
+    width: 75%; 
+    height: 50%;
+    top: 70%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: large;
+    font-weight: normal;
+    font-style: italic;
+    line-height: 3;
   }

@@ -7,14 +7,14 @@ from flask import Flask, request, render_template
 app = Flask(__name__)
 
 
-def get_text(x):
-    html = requests.get(x).content
+def get_text(url: str, tag: str):
+    html = requests.get(url).content
 
     unicode_str = html.decode('utf8')
     encoded_str = unicode_str.encode('ascii', 'ignore')
     soup = bs(encoded_str, 'html.parser')
 
-    element = soup.find_all('p')
+    element = soup.find_all(tag)
     text_list = [re.sub(r'<.+?>', r'', str(p)) for p in element]
 
     text = '\n'.join(text_list)
@@ -34,11 +34,13 @@ def get_art_text():
     url = request.form['flink']
 
     if url != '':
-        art_text = get_text(url)
+        art_h1 = get_text(url=url, tag='h1')
+        art_p = get_text(url=url, tag='p')
     else:
-        art_text = ''
+        art_h1 = ''
+        art_p = ''
 
-    return render_template('index.html', text1=art_text)
+    return render_template('index.html', text1=art_h1, text2=art_p)
 
 
 if __name__ == '__main__':
