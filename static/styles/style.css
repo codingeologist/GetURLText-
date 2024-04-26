@@ -13,22 +13,6 @@ body {
     justify-content: center;
     word-wrap: break-word;
   }
-  
-  #textBody {
-    margin: 0;
-    position: absolute;
-    vertical-align: middle;
-    text-align: center;
-    width: 75%;
-    height: 50%;
-    top: 40%;
-    transform: translateY(-50%);
-    color: white;
-    font-size: large;
-    font-weight: bold;
-    font-style: italic;
-    line-height: 2.5em;
-  }
 
   #search {
     margin: 0;
@@ -41,4 +25,43 @@ body {
     padding-bottom: 18px;
     border-radius:10px;
     box-shadow:0 0 15px 4px rgba(255, 0, 0, 0.308);
+  }
+
+#flink {
+  width: 98%;
+  resize: horizontal;
+  vertical-align: middle;
+  text-align: center;
+}
+
+  #textH1 {
+    margin: 0;
+    position: absolute;
+    vertical-align: middle;
+    text-align: center;
+    width: 75%;
+    height: 50%;
+    top: 40%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 2;
+  }
+
+  #textP {
+    margin: 0;
+    position: absolute;
+    vertical-align: middle;
+    text-align: justify;
+    width: 75%; 
+    height: 50%;
+    top: 70%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: large;
+    font-weight: normal;
+    font-style: italic;
+    line-height: 3;
   }
