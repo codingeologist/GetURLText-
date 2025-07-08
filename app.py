@@ -17,7 +17,7 @@ def get_text(url: str, tag: str):
     element = soup.find_all(tag)
     text_list = [re.sub(r'<.+?>', r'', str(p)) for p in element]
 
-    text = '\n'.join(text_list)
+    text = '<br><br>'.join(text_list)
 
     return text
 
@@ -37,8 +37,8 @@ def get_art_text():
         art_h1 = get_text(url=url, tag='h1')
         art_p = get_text(url=url, tag='p')
     else:
-        art_h1 = ''
-        art_p = ''
+        art_h1 = 'Placeholder Heading....'
+        art_p = 'Placeholder Text...'
 
     return render_template('index.html', text1=art_h1, text2=art_p)
 

@@ -12,7 +12,9 @@
         <!--- Stylesheet
         ================================================== -->
        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css')}}"/>
-       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono"/>
+       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!--- Scripts
         ================================================== -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -24,20 +26,39 @@
        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png')}}">
        <title>UBlock.me</title>
     </head>
+    <header>
+	<div class="toggle-theme-container">
+            <div class="toggle-theme" onclick="toggleTheme()"></div>
+        </div>
+    </header>
     <body>
+	    <header>
+        	<h1>UnBlock.me</h1>
+        	<div class="toggle-theme-container">
+            		<div class="toggle-theme" onclick="toggleTheme()"></div>
+        	</div>
+    	    </header>
         <!-- Parent -->
-        <div id="parent">
+        <div class="container">
+	    <p>Read an article without having to give away a cookie 🍪...</p>
+	    <div class=fork-me>
+	    	<a href="https://github.com/codingeologist/GetURLText-" target="_blank noreferrer nofollow"><i class="fa fa-github"></i> Fork Me</a>
+	    </div>
+	    <br>
             <!-- Form -->
-            <form id="search" method="POST">
-                <input type="text" id="flink" name="flink" placeholder="article URL..."><br>
+            <form class="search" method="POST">
+                <input type="text" class="flink" name="flink" placeholder="article URL..."><br>
                 <input type="submit" value="UnBlock Article!">
-            </form>             
-            <div id="textH1">
-                {{ text1 }}
-            </div>
-            <div id="textP">
-                {{ text2 }}
-            </div>
+            </form>
+	    <br>
+	    <button type="button" class="collapsible">{{ text1 }} 🔽</button>
+	    <div class="content">{{ text2 | safe }}</div>
         </div>
     </body>
+    <footer>
+        <a href="https://codingeologist.github.io" target="_blank noreferrer nofollow">© codingeologist</a>
+    </footer>
+    <!--- Scripts
+    ================================================== -->
+    <script type="text/javascript" src="static/js/index.js"></script>
 </html>
