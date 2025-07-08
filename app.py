@@ -50,8 +50,8 @@ def get_art_text():
         art_h1 = 'Placeholder Header...'
         art_p = 'Placeholder Text...'
     else:
-        art_h1 = get_text(url=url, tag='h1'
-        art_p = get_text(url=url, tag='p'
+        art_h1 = get_text(url=url, tag='h1')
+        art_p = get_text(url=url, tag='p')
 
     return render_template('index.html', text1=art_h1, text2=art_p)
 
