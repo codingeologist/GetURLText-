@@ -21,13 +21,8 @@ The main part of the program is the get_text function:
 
 - build docker image with tag:$version
 ```bash
-export APP_VERSION=0.0.1
+export APP_VERSION=0.1.0
 docker build --tag url-text:$APP_VERSION .
-```
-
-- show docker images list
-```bash
-docker images
 ```
 
 - run docker image
